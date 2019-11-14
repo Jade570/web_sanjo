@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <% include partials/head %>
+</head>
+<body>
+<% include partials/menu %><div class="container-fluid bg-3 text-center">
+  <h3><%= page %></h3><br>
+  <div class="row">
+
+<h3>안녕하신가 나는 컴생원이라네 🐰 <br>원하는 스타일을 말씀해 주시게나~~ 얼쑤~<br><br></h3>
+
+
+<div class="col-sm-1"></div>
+<div class="col-sm-4">나:<br><br><br></div>
+<div class="col-sm-6"></div>
+<div class="col-sm-12"></div>
+
+    <div class="col-sm-3"></div>
+
+    <div class="col-sm-4" align = "left">
+      <p>제는</p>
+      <form method="post">
+        <input type="checkbox" name="je" value="nam"> 전남제 <br>
+        <input type="checkbox" name="je" value="chug"> 충청제 <br>
+        <input type="checkbox" name="je" value="buk"> 전북제 <br>
+        <input type="checkbox" class="hidden"><br><br>
+      </form>
+    </div>
+
+    <div class="col-sm-4" align = "left">
+      <p>이런</p>
+      <form method="post">
+        <input type="radio" name="mori" value="yang"> 진양 <br>
+        <input type="radio" name="mori" value="jung"> 중모리 <br>
+        <input type="radio" name="mori" value="jungjung"> 중중모리 <br>
+        <input type="radio" name="mori" value="jajin"> 자진모리 <br><br>
+      </form>
+    </div>
+
+    <div class="col-sm-1"></div>
+
+    <div class="col-sm-3"></div>
+    <div class="col-sm-4" align = "left">  <p>로 할 것이라네,</p> </div>
+    <div class="col-sm-4" align = "left">  <p>장단을 사용했으면 하고</p><br><br> </div>
+    <div class="col-sm-1"></div>
+
+    <div class = "col-sm-12"><br></div>
+
+    <div class="col-sm-3"></div>
+
+    <div class="col-sm-4" align = "left">
+      <p>선율은</p>
+      <form method="post">
+        <input type="radio" name="type" value="a"> 도입선율 (opening) <br>
+        <input type="radio" name="type" value="b"> 긴장선율 (suspense) <br>
+        <input type="radio" name="type" value="c"> 극적선율 (highlight) <br>
+        <input type="radio" name="type" value="d"> 이완선율 (ending) <br>
+        <!-- <input type="radio" name="type" value="e"> 연결선율 (joint) <br> -->
+      </form>
+    </div>
+
+    <div class="col-sm-4" align = "left">
+      <p>조는</p>
+      <form method="post">
+        <input type="radio" name="jo" value="gye"> 계면조 <br>
+        <input type="radio" name="jo" value="pyung"> 평조 <br>
+        <input type="checkbox" class="hidden"><br>
+        <input type="checkbox" class="hidden"><br>
+      </form>
+    </div>
+
+    <div class="col-sm-1"></div>
+
+    <div class = "col-sm-12"><br></div>
+    <div class="col-sm-3"></div>
+    <div class="col-sm-4" align = "left"> <p>이런 느낌을 생각하고 있으며</p> </div>
+    <div class="col-sm-4" align = "left"> <p>를 원한 다네~~</p> </div>
+    <div class="col-sm-1"></div>
+
+<div class = "col-sm-12"><br>
+
+    <p><br><input type="submit" value="지화자~ 좋다~"></input></p>
+    </div>
+    </div>
+</div></body>
+<% include partials/script %>
+</html>

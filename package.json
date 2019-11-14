@@ -1,0 +1,26 @@
+{
+  "name": "sanjo",
+  "version": "0.0.1",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "4.16.4",
+    "http-errors": "~1.6.3",
+    "jsdom": "^15.2.1",
+    "midi-player-js": "^2.0.5",
+    "morgan": "~1.9.1",
+    "mysql": "2.17.1"
+  },
+  "main": "app.js",
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

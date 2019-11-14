@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+<body>
+  <h1> server working </h1>
+  <p> just put your html,css, js files here and it work on your own local nodejs server </p>
+  <p id="demo" onclick="myFunction()">Click me.</p>
+  <p id="play-button" onclick="play()">Play</p>
+</body>
+
+
+<script src="../public/javascripts/MIDI.js" type="text/html"></script>
+<script src="https://cdn.jsdelivr.net/npm/midi-player-js@2.0.5/browser/midiplayer.min.js"></script>
+<script>
+
+  var Player = <%- JSON.stringify(Player) %>;
+
+  document.getElementById("play-button").addEventListener("click", play);
+
+  function play() {
+    console.log(Player);
+  	Player.play();
+  	document.getElementById("play-button").innerHTML = "Pause";
+  }
+
+  function pause() {
+
+    document.getElementById("play-button").innerHTML = "Play";
+  }
+
+  document.getElementById("demo").addEventListener("click", myFunction);
+  function myFunction() {
+    document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
+  }
+
+</script>
+
+</html>
