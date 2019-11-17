@@ -2,6 +2,7 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
 var logger = require('morgan');
 var mysql = require('mysql');
 var dbconfig = require('./database.js');
@@ -10,6 +11,7 @@ var connection = mysql.createConnection(dbconfig);
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var musicRouter = require('./routes/music');
+var testRouter = require('./routes/test');
 
 var app = express();
 
@@ -30,20 +32,20 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/music', musicRouter);
+app.use('/test', testRouter);
 
-app.get('/', function(req, res){
-
-  connection.query('SELECT * from Persons', function(err, rows) {
-    if(err) throw err;
-
-    console.log('The solution is: ', rows);
-    res.send(rows);
-  });
-});
 
 app.listen(app.get('port'), function () {
   console.log('Express server listening on port ' + app.get('port'));
 });
+
+/*
+app.post('/music', function(req,res){
+  res.send("je :", req.body.je[0], req.body.je[1], req.body.je[2]);
+  res.send("mori :", req.body.mori);
+  res.send("type :", req.body.type);
+  res.send("jo :", req.body.jo);
+});*/
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

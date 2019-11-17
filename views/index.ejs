@@ -20,22 +20,24 @@
 
     <div class="col-sm-4" align = "left">
       <p>제는</p>
-      <form method="post">
-        <input type="checkbox" name="je" value="nam"> 전남제 <br>
-        <input type="checkbox" name="je" value="chug"> 충청제 <br>
-        <input type="checkbox" name="je" value="buk"> 전북제 <br>
+      <form action="/test" method="post">
+        <input type="checkbox" name="je[0]"> 전남제 <br>
+        <input type="checkbox" name="je[1]"> 충청제 <br>
+        <input type="checkbox" name="je[2]"> 전북제 <br>
         <input type="checkbox" class="hidden"><br><br>
-      </form>
+      <!--
+      100 전남제 010 충청제 001 전북제
+      110 전남+충청 101 전남+전북 011 충청+전북
+      111 전남+충청+전북
+     -->
     </div>
 
     <div class="col-sm-4" align = "left">
       <p>이런</p>
-      <form method="post">
         <input type="radio" name="mori" value="yang"> 진양 <br>
         <input type="radio" name="mori" value="jung"> 중모리 <br>
         <input type="radio" name="mori" value="jungjung"> 중중모리 <br>
         <input type="radio" name="mori" value="jajin"> 자진모리 <br><br>
-      </form>
     </div>
 
     <div class="col-sm-1"></div>
@@ -51,23 +53,19 @@
 
     <div class="col-sm-4" align = "left">
       <p>선율은</p>
-      <form method="post">
         <input type="radio" name="type" value="a"> 도입선율 (opening) <br>
         <input type="radio" name="type" value="b"> 긴장선율 (suspense) <br>
         <input type="radio" name="type" value="c"> 극적선율 (highlight) <br>
         <input type="radio" name="type" value="d"> 이완선율 (ending) <br>
         <!-- <input type="radio" name="type" value="e"> 연결선율 (joint) <br> -->
-      </form>
     </div>
 
     <div class="col-sm-4" align = "left">
       <p>조는</p>
-      <form method="post">
         <input type="radio" name="jo" value="gye"> 계면조 <br>
         <input type="radio" name="jo" value="pyung"> 평조 <br>
         <input type="checkbox" class="hidden"><br>
         <input type="checkbox" class="hidden"><br>
-      </form>
     </div>
 
     <div class="col-sm-1"></div>
@@ -81,6 +79,7 @@
 <div class = "col-sm-12"><br>
 
     <p><br><input type="submit" value="지화자~ 좋다~"></input></p>
+      </form>
     </div>
     </div>
 </div></body>

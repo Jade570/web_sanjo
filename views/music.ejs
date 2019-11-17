@@ -12,15 +12,22 @@
 <script src="../public/javascripts/MIDI.js" type="text/html"></script>
 <script src="https://cdn.jsdelivr.net/npm/midi-player-js@2.0.5/browser/midiplayer.min.js"></script>
 <script>
+  //import * as Player from "midi-player-js";
+  //var Player = <%- JSON.stringify(Player) %>;
 
-  var Player = <%- JSON.stringify(Player) %>;
+  var Player = new MidiPlayer.Player(function(event) {
+  });
+
+  Player.loadFile('/home/jade570/midifiles/sangun/gye/dang_a_1_gye.mid');
+  Player.play();
+
 
   document.getElementById("play-button").addEventListener("click", play);
 
   function play() {
     console.log(Player);
-  	Player.play();
   	document.getElementById("play-button").innerHTML = "Pause";
+    Player.play();
   }
 
   function pause() {
@@ -28,10 +35,6 @@
     document.getElementById("play-button").innerHTML = "Play";
   }
 
-  document.getElementById("demo").addEventListener("click", myFunction);
-  function myFunction() {
-    document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
-  }
 
 </script>
 
