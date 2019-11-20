@@ -1,41 +1,26 @@
 <!doctype html>
 <html>
+<head>
+<script type='text/javascript' src='//www.midijs.net/lib/midi.js'></script>
+</head>
 
 <body>
-  <h1> server working </h1>
-  <p> just put your html,css, js files here and it work on your own local nodejs server </p>
-  <p id="demo" onclick="myFunction()">Click me.</p>
-  <p id="play-button" onclick="play()">Play</p>
+<script>
+  console.log( MIDIjs.get_audio_status());
+</script>
+  <div style="border:1px solid #ccc; margin-bottom:12px; background:#f7f7f7;">
+    <div id="play-bar" style="height:20px;background:#33C3F0;width:0%;"></div>
+  </div>
+  <p>
+    <button class="button" onclick="MIDIjs.play('./public/dang_a_1_gye.mid')">Play</button>
+    <button class="button" onclick="MIDIjs.stop()">Stop</button>
+    <a href="https://github.com/Jade570/midifiles/raw/master/sangun/gye/dang_a_10_gye.mid">
+    Download File
+    </a>
+  </p>
+
 </body>
 
 
-<script src="../public/javascripts/MIDI.js" type="text/html"></script>
-<script src="https://cdn.jsdelivr.net/npm/midi-player-js@2.0.5/browser/midiplayer.min.js"></script>
-<script>
-  //import * as Player from "midi-player-js";
-  //var Player = <%- JSON.stringify(Player) %>;
-
-  var Player = new MidiPlayer.Player(function(event) {
-  });
-
-  Player.loadFile('/home/jade570/midifiles/sangun/gye/dang_a_1_gye.mid');
-  Player.play();
-
-
-  document.getElementById("play-button").addEventListener("click", play);
-
-  function play() {
-    console.log(Player);
-  	document.getElementById("play-button").innerHTML = "Pause";
-    Player.play();
-  }
-
-  function pause() {
-
-    document.getElementById("play-button").innerHTML = "Play";
-  }
-
-
-</script>
 
 </html>
